@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link href="../stylesheets/styleLogin.css" rel="stylesheet" />
+</head>
+<!--body-->
+    <!-- <form name="login" action="http://localhost:3000/login/checkUserCredentials" method="GET">
+    <label value="username"></label>
+    <input type="text" name="username" id="username" >
+    <label value="password"></label>
+    <input type="password" name="password" id="password">
+    <input type="submit" name="Login" value="Login">
+    </form>
+    first time user? then fill the below form
+    <br/> 
+    <form name="signup" action="http://localhost:3000/login/save" method="POST">
+        <label value="username"></label>
+        <input type="text" name="username" id="username" >
+        <label value="password"></label>
+        <input type="password" name="password" id="password">
+        <input type="submit" name="signUp" value="signUp">
+    </form> -->
+    <body style="background-color:grey;"  onload="load()">
+		
+		<div class="header" id="header">
+			<a class="brand" href="">Chat App Login Page</a>
+		
+			<ul class="left">
+				<li><input id="check" class="btn" type="button" onclick="check()" value=""></li>
+				<li><input class="btn" type="submit" target="about.php" value="About"></li>
+			</ul>
+		</div>
+
+		<div class="outer" id="outer">
+		
+			<div class="boxx" id="login">
+				
+				<form name="login" method="GET" action="http://localhost:3000/login/checkUserCredentials">
+					
+					<label for="Username">Username&nbsp;&nbsp;&nbsp;</label>
+					<input  type="text" class="box" name="username" id="username" value=""placeholder="username" onkeyup="validation()" ><br>
+					<p style="color:red;" id="error"><br><br></p>
+					
+					<label for="password">Password&nbsp;&nbsp;&nbsp;</label>
+					<input type="text"  class="box" name="password" id="password" value=""placeholder="Password"><br><br><br>
+
+					<input class="button" type="button" value="Register &nbsp;" onclick="register()">
+
+					<input type="submit" class="button"  value="Submit" > 
+				</form>
+			</div>
+
+
+			<div class="boxx" id="register">
+				
+				<form name="signup" method="POST" action="http://localhost:3000/login/save">
+					
+				<label  for="username">Username&nbsp;&nbsp;&nbsp;</label>
+				<input class="box" type="text" name="username" id="username" value="" placeholder="Username"><br><br><br>
+				
+				
+				<label for="password">Password&nbsp;&nbsp;&nbsp;</label>
+				<input class="box" type="text" name="password" id="password" value=""placeholder="Password"><br><br><br>
+
+				<input class="button" type="button" value="Login" onclick="login()">
+
+				<input class="button" type="submit" value="Submit"> 
+				</form>
+			</div>
+
+
+		</div>
+	
+	</body>
+
+<script src="../javascripts/login.js"></script>
+</html>
